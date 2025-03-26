@@ -1,5 +1,6 @@
-
 import React, { useState, useEffect } from 'react';
+
+declare const $: JQuery;
 
 const ScrollToTop = () => {
   const [isVisible, setIsVisible] = useState(false);

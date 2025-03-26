@@ -1,7 +1,8 @@
-
 import React, { useEffect, useRef } from 'react';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
+
+declare const $: JQuery;
 
 const Hero = () => {
   const heroRef = useRef<HTMLDivElement>(null);

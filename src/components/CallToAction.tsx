@@ -1,6 +1,7 @@
-
 import React, { useEffect } from 'react';
 import { Button } from '@/components/ui/button';
+
+declare const $: JQuery;
 
 const CallToAction = () => {
   useEffect(() => {

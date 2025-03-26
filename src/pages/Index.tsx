@@ -9,6 +9,8 @@ import CallToAction from '@/components/CallToAction';
 import Footer from '@/components/Footer';
 import ScrollToTop from '@/components/ScrollToTop';
 
+declare const $: JQuery;
+
 const Index = () => {
   useEffect(() => {
     // Initial animation setup

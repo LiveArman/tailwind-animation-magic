@@ -1,5 +1,6 @@
-
 import React, { useEffect } from 'react';
+
+declare const $: JQuery;
 
 const Testimonials = () => {
   useEffect(() => {
