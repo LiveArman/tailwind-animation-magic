@@ -1,12 +1,42 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+
+import React, { useEffect } from 'react';
+import Header from '@/components/Header';
+import Hero from '@/components/Hero';
+import Features from '@/components/Features';
+import PricingSection from '@/components/PricingSection';
+import Testimonials from '@/components/Testimonials';
+import CallToAction from '@/components/CallToAction';
+import Footer from '@/components/Footer';
+import ScrollToTop from '@/components/ScrollToTop';
 
 const Index = () => {
+  useEffect(() => {
+    // Initial animation setup
+    if (typeof $ !== 'undefined') {
+      // Smooth scroll for anchor links
+      $('a[href^="#"]').on('click', function(e) {
+        e.preventDefault();
+        
+        const target = $($(this).attr('href')!);
+        if (target.length) {
+          $('html, body').animate({
+            scrollTop: target.offset()!.top - 80
+          }, 800);
+        }
+      });
+    }
+  }, []);
+
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-gray-600">Start building your amazing project here!</p>
-      </div>
+    <div className="min-h-screen bg-white overflow-x-hidden">
+      <Header />
+      <Hero />
+      <Features />
+      <PricingSection />
+      <Testimonials />
+      <CallToAction />
+      <Footer />
+      <ScrollToTop />
     </div>
   );
 };
